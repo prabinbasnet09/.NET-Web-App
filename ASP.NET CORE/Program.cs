@@ -23,7 +23,7 @@ app.UseWhen((HttpContext context) =>
         app.UseNewCustomMiddleware();
     });
 
-//middleware 3
+// middleware 3
 app.Run(async (HttpContext context) =>
 {
     await context.Response.WriteAsync("This is the last middleware");
