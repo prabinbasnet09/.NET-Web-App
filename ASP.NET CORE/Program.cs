@@ -6,7 +6,7 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
-//middleware 1
+// middleware 1
 app.Use(async (HttpContext context, RequestDelegate next) => {
     await context.Response.WriteAsync("Hello");
     await next(context);
